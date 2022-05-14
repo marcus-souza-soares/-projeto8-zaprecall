@@ -1,5 +1,5 @@
 import Init from "./Init";
-import Cards from "./Cards";
+import Deck from "./Deck";
 import React from 'react';
 
 export default function App() {
@@ -17,11 +17,9 @@ export default function App() {
 
     return (
         <>
-            <div>
-                {
-                    inicio ? <Init setInicio={setInicio} img={logo}/> : <Cards logopequena={logopequena} />
-                }
-            </div>
+            {
+                inicio ? <Init setInicio={setInicio} img={logo} /> : <Deck logopequena={logopequena} />
+            }
         </>
     );
 }

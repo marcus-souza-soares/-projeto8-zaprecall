@@ -1,4 +1,5 @@
 export default function Init(props){
+    
     return (
         <>
             <div className="home">
