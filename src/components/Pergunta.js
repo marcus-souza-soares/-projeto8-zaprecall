@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "./Card";
 
-export default function Pergunta({ indice, texto }) {
+export default function Pergunta({ indice, texto, setLista }) {
 
     let [clique, setClique] = React.useState(0);
     const [cardflipfront, setCardflipfront] = React.useState('');
@@ -23,29 +23,32 @@ export default function Pergunta({ indice, texto }) {
     const [icone, setIcone] = React.useState("");
     const [colorir_fonte, setColorir_fonte] = React.useState("");
     
+    
     function Renderpergunta() {
         function Incorreto(){
-            Clique();
+            setClique(clique + 1);
             setIcone(incorreto);
-            console.log(clique)
             setColorir_fonte("incorreto-respondido")
+            setLista(incorreto)
         }
         function Quase(){
-            Clique();
+            setClique(clique + 1);
             setIcone(quase);
-            setColorir_fonte("quase-respondido")
+            setColorir_fonte("quase-respondido");
+            setLista(quase)
         }
         function Zap(){
-            Clique();
-            setIcone(zap)
-            setColorir_fonte("zap-respondido")
+            setClique(clique + 1);
+            setIcone(zap);
+            setColorir_fonte("zap-respondido");
+            setLista(zap)
         }
         function Clique() {
-            setClique(clique + 1);
             if (clique === 1) {
                 setCardflipfront('rodarprafrente');
                 setCardflipback('rodarpratras');
             }
+            setClique(clique + 1);
         }
         function Pergunta({children}) {
             return (
@@ -84,8 +87,6 @@ export default function Pergunta({ indice, texto }) {
                 </Pergunta>)
         }
     }
-
-
 
     return (
         <>

@@ -1,7 +1,7 @@
-export default function Footer({quantidade}){
+export default function Footer({quantidade, respondidas, children}){
     return(
         <div className="footer">
-            <h2>0/{quantidade} concluidos</h2>
+            {children}
         </div>
     )
 }

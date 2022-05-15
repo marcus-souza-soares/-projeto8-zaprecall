@@ -22,7 +22,7 @@ export default function Deck({ logopequena }) {
     },
     {
         pergunta: 'O ReactDOM nos ajuda __',
-        reposta: 'interagindo com a DOM para colocar componentes React na mesma'
+        resposta: 'interagindo com a DOM para colocar componentes React na mesma'
     },
     {
         pergunta: 'Usamos o npm para __',
@@ -36,7 +36,14 @@ export default function Deck({ logopequena }) {
         pergunta: 'Usamos estado (state) para __',
         resposta: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente'
     }]
-    
+    conteudo.sort(comparador);
+
+    function comparador() {
+        return Math.random() - 0.5;
+    }
+
+    let [lista, setLista] = React.useState([])
+
     return (
         <>
             <div className="topo">
@@ -51,9 +58,15 @@ export default function Deck({ logopequena }) {
                         indice={index}
                         key={index}
                         texto={item}
+                        setLista={item => setLista([...lista, item])}
                     />)}
             </div>
-            <Footer quantidade={conteudo.length}/>
+            <Footer respondidas={lista.length} >
+                <h2>{lista.length}/{conteudo.length} concluidos</h2>
+                <div className="icones">
+                    {lista.map(item => <span className="icone">{item}</span>)}
+                </div>
+            </Footer>
         </>
     )
 }
