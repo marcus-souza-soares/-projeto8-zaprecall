@@ -65,8 +65,8 @@ body {
     margin-top: 20px;
 }
 
-.home button,
-.pergunta:hover {
+.home button, ion-icon,
+img, .esqueci, .quase, .zap:hover {
     cursor: pointer;
 }
 
@@ -74,7 +74,7 @@ body {
 .topo {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: 30px 0;
@@ -119,6 +119,100 @@ body {
     height: 23px;
 }
 
+.pergunta.card {
+    width: 299px;
+    height: 131px;
+    display: block;
+    position: relative;
+    background: #FFFFD5;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    position: absolute;
+    z-index: 1;
+}
+
+.face>div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.face img {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.rodarprafrente {
+    transform: rotateY(0deg);
+}
+
+.rodarpratras {
+    transform: rotateY(-180deg);
+}
+
+.face .alternativas {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    justify-content: space-between;
+    padding-top: 30px ;
+}
+
+.esqueci,
+.quase,
+.zap {
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.esqueci {
+    background-color: #FF3030;
+}
+
+.quase {
+    background-color: #FF922E;
+}
+
+.zap {
+    background-color: #2FBE34;
+}
+.incorreto-respondido, .quase-respondido, .zap-respondido{
+    text-decoration-line: line-through;
+}
+.incorreto-respondido{
+    color: #FF3030;
+}
+.zap-respondido{
+    color: #2FBE34;
+}
+.quase-respondido{
+    color: #FF922E;
+}
 .footer {
     padding: 20px;
     width: 100%;

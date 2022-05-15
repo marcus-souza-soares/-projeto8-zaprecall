@@ -1,7 +1,7 @@
-export default function Footer(){
+export default function Footer({quantidade}){
     return(
         <div className="footer">
-            <h2>0/4 concluidos</h2>
+            <h2>0/{quantidade} concluidos</h2>
         </div>
     )
 }
