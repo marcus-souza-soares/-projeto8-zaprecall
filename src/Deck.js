@@ -77,14 +77,16 @@ export default function Deck({ logopequena }) {
                 }
             }
             return (
-                <div>
+                <>
                     <div>
                         <img src="/imgs/party.png" alt="" />
                         <h2>Parabéns!</h2>
                     </div>
-                    <h3>Você não esqueceu de</h3>
-                    <h3>nenhum flashcard!</h3>
-                </div>)
+                    <div>
+                        <h3>Você não esqueceu de</h3>
+                        <h3>nenhum flashcard!</h3>
+                    </div>
+                </>)
         } else {
             return "";
         }
