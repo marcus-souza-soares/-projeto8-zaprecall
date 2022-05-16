@@ -64,7 +64,7 @@ export default function Deck({ logopequena }) {
             <Footer respondidas={lista.length} >
                 <h2>{lista.length}/{conteudo.length} concluidos</h2>
                 <div className="icones">
-                    {lista.map(item => <span className="icone">{item}</span>)}
+                    {lista.map((item, index) => <span className="icone" key={index}>{item}</span>)}
                 </div>
             </Footer>
         </>
