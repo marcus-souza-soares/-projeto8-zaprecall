@@ -5,9 +5,10 @@
 * {
     box-sizing: border-box;
 }
-body, html {
-    height: 100%;
+
+body {
     background-color: #FB6B6B;
+    min-height: 1400px;
 }
 
 .root {
@@ -24,8 +25,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 250px;
-    left: 20%;
+    margin-top: 180px;
 }
 
 .home img {
@@ -58,8 +58,12 @@ body, html {
     margin-top: 20px;
 }
 
-.home button, ion-icon,
-img, .esqueci, .quase, .zap:hover {
+.home button,
+ion-icon,
+img,
+.esqueci,
+.quase,
+.zap:hover {
     cursor: pointer;
 }
 
@@ -84,6 +88,7 @@ img, .esqueci, .quase, .zap:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .pergunta {
@@ -200,18 +205,25 @@ img, .esqueci, .quase, .zap:hover {
 .zap {
     background-color: #2FBE34;
 }
-.incorreto-respondido, .quase-respondido, .zap-respondido{
+
+.incorreto-respondido,
+.quase-respondido,
+.zap-respondido {
     text-decoration-line: line-through;
 }
-.incorreto-respondido{
+
+.incorreto-respondido {
     color: #FF3030;
 }
-.zap-respondido{
+
+.zap-respondido {
     color: #2FBE34;
 }
-.quase-respondido{
+
+.quase-respondido {
     color: #FF922E;
 }
+
 .footer {
     padding: 20px;
     width: 100%;
@@ -224,10 +236,29 @@ img, .esqueci, .quase, .zap:hover {
     font-size: 18px;
     color: #333333;
     text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
-.footer:not(:last-child){
-    margin-bottom: 20pc;
+
+.footer>span,
+.footer>div {
+    margin: 10px 0;
 }
-.icone{
+
+.icone {
     margin: 2px;
+}
+
+.footer div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 18px;
+}
+.footer div:first-child img{
+    margin-right: 5px;
 }

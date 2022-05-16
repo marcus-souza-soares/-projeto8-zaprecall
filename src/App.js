@@ -18,7 +18,7 @@ export default function App() {
     return (
         <>
             {
-                inicio ? <Init setInicio={setInicio} img={logo} /> : <Deck logopequena={logopequena} />
+                inicio ? <Init setInicio={setInicio} img={logo} /> : <Deck logopequena={logopequena}/>
             }
         </>
     );
