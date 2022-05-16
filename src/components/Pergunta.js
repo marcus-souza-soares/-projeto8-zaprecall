@@ -1,10 +1,7 @@
 import React from 'react';
 import Card from "./Card";
 
-export default function Pergunta({ indice, texto, setLista, incorreto, quase, zap, lista, setErrou }) {
-
-    //LISTA DE SVGS
-    
+export default function Pergunta({ indice, texto, setLista, incorreto, quase, zap, setErrou }) { 
 
     const [icone, setIcone] = React.useState("");
     const [colorir_fonte, setColorir_fonte] = React.useState("");
@@ -34,8 +31,6 @@ export default function Pergunta({ indice, texto, setLista, incorreto, quase, za
                 </div>
             );
         }
-
-
         if (cardaberto === 'fechado') {
             return (
                 <Pergunta>
